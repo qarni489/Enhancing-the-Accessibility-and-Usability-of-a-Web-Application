@@ -36,7 +36,6 @@ img { display: block; width: 100%; height: auto; }
 
 .car-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 1.25rem; list-style: none; padding: 0; }
 .car { border: 1px solid #767676; padding: 1rem; }
-.price { font-size: 1.25rem; font-weight: bold; }
 
 dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 1rem; }
 dt { font-weight: bold; }
