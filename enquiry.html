@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vehicle enquiry - Barry's Car Sales</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+    <p class="site-name">Barry's Car Sales</p>
+    <p>Local quality used cars at sensible prices</p>
+    <p>Call <a href="tel:+441707111222">01707 111 222</a></p>
+    <nav aria-label="Main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main" tabindex="-1">
+    <h1>Vehicle enquiry</h1>
+    <p>Complete the form below and a member of our team will contact you. We use your details to reply to your enquiry.</p>
+
+    <div id="error-summary" class="error-summary" tabindex="-1" aria-labelledby="error-title" hidden>
+        <h2 id="error-title">There is a problem</h2>
+        <ul></ul>
+    </div>
+    <p id="status" class="status" role="status"></p>
+
+    <form id="enquiry-form" action="#" method="post">
+        <div class="field">
+            <label for="car">Vehicle (required)</label>
+            <p class="error" id="car-error" hidden></p>
+            <select id="car" name="car" required>
+                <option value="">Choose a vehicle</option>
+                <option value="hatch">2019 Hatch 1.0</option>
+                <option value="trail">2020 Trail 1.5</option>
+                <option value="s4">2018 Audi S4</option>
+                <option value="citye">2021 City-e</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="name">Full name (required)</label>
+            <p class="error" id="name-error" hidden></p>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+            <label for="email">Email address (required)</label>
+            <p class="hint" id="email-hint">For example, name@example.com</p>
+            <p class="error" id="email-error" hidden></p>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint" required>
+        </div>
+        <div class="field">
+            <label for="phone">Telephone (required if you choose phone contact)</label>
+            <p class="error" id="phone-error" hidden></p>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="field">
+            <label for="message">Your message (required)</label>
+            <p class="hint" id="message-hint">Tell us what you would like to know.</p>
+            <p class="error" id="message-error" hidden></p>
+            <textarea id="message" name="message" rows="6" aria-describedby="message-hint" required></textarea>
+        </div>
+
+        <fieldset>
+            <legend>Preferred contact method</legend>
+            <label class="choice"><input type="radio" name="contact" value="email" checked> Email</label>
+            <label class="choice"><input type="radio" name="contact" value="phone"> Phone</label>
+        </fieldset>
+
+        <label class="choice"><input type="checkbox" name="updates"> Send me occasional offers and updates (optional)</label>
+
+        <button type="submit">Send enquiry</button>
+        <button type="reset" class="secondary">Clear form</button>
+    </form>
+
+    <p>We aim to respond within two working days.</p>
+</main>
+
+<footer>
+    <p>Barry's Car Sales · 15 Chipmunk Close, Hatfield, Hertfordshire · <a href="tel:+441707111222">01707 111 222</a></p>
+</footer>
+</body>
+</html>
